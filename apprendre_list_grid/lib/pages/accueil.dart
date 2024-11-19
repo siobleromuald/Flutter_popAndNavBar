@@ -1,7 +1,9 @@
+import 'package:apprendre_list_grid/widgets/list_separated.dart';
 import 'package:apprendre_list_grid/widgets/simple_listview.dart';
 import 'package:flutter/material.dart';
 
 import '../models/list_type.dart';
+import '../widgets/builder.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key, required this.title});
@@ -12,9 +14,9 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final List<ListType>_lists=[
-      ListType("Liste simple", Icons.list, const SimpleListView()),
-    ListType("Liste Builder", Icons.settings, const Center()),
-    ListType("Liste Séparé", Icons.filter_list, const Center()),
+    ListType("Liste simple", Icons.list, const SimpleListView()),
+    ListType("Liste Builder", Icons.settings, const BuilderWidget()),
+    ListType("Liste Séparé", Icons.filter_list, const SeparatedList()),
     ListType("Liste simple", Icons.list_alt_outlined, const Center())
   ];
 
