@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../models/list_type.dart';
 import '../widgets/builder.dart';
+import '../widgets/list_custom.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key, required this.title});
@@ -17,7 +18,7 @@ class _HomePageState extends State<HomePage> {
     ListType("Liste simple", Icons.list, const SimpleListView()),
     ListType("Liste Builder", Icons.settings, const BuilderWidget()),
     ListType("Liste Séparé", Icons.filter_list, const SeparatedList()),
-    ListType("Liste simple", Icons.list_alt_outlined, const Center())
+    ListType("Customer", Icons.list_alt_outlined, const ListCustom())
   ];
 
   @override
