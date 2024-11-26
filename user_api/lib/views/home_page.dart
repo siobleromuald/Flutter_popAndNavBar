@@ -48,8 +48,22 @@ class _HomePageState extends State<HomePage> {
           child: Column(children: [
             const SizedBox( height: 20),
              TextField(
-                decoration:const InputDecoration(
-                labelText: 'Recherche', suffix: Icon(Icons.search,color: Colors.blue,)),
+                decoration: InputDecoration(
+                  contentPadding:const EdgeInsets.symmetric(vertical: 2),
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(30.0),
+                      borderSide: const BorderSide(width: 0.8),
+                    ),
+                  hintText: 'Rechercher par le nom',
+                  prefixIcon:const Icon(Icons.search, size: 30,color: Colors.blue,),
+                  //labelText: 'Recherche',
+                  suffix: IconButton(
+                      icon: const Icon(Icons.clear,color: Colors.red,),
+                      onPressed: (){},
+                  )
+
+                ),
+
                 onChanged: (value)=>searchResult(value),
             ),
             const SizedBox( height: 20),
